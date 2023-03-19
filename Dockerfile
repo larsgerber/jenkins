@@ -14,6 +14,8 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 
 RUN apt-get update && apt-get install -y docker-ce-cli
 
+RUN ssh -o StrictHostKeyChecking=accept-new -T git@github.com || true
+
 USER jenkins
 
 # RUN jenkins-plugin-cli --plugins "blueocean:1.27.3 docker-workflow:1.29"
