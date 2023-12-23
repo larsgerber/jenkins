@@ -1,4 +1,4 @@
-FROM jenkins/agent:latest-jdk11
+FROM jenkins/agent:latest-jdk17
 
 USER root
 
